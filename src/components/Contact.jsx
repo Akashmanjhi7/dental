@@ -1,8 +1,50 @@
-import React from "react";
-import { IoMdAdd } from "react-icons/io";
+import React, { useState } from "react";
 import ContactSection from "./utils/ContactSection";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitSuccess(false); // Reset success state
+    setErrorMessage(""); // Clear previous errors
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: JSON.stringify({
+          ...formData,
+          access_key: '8ab15586-4f7c-4903-9608-98ec569db172', // Replace with your Web3Forms access key
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitSuccess(true);
+        setFormData({ name: "", email: "", message: "" }); // Reset form after successful submission
+      } else {
+        setErrorMessage(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setErrorMessage("Failed to send the message. Please try again later.");
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <div className="bg-zinc-100 py-10 sm:py-20 px-4 sm:px-20">
@@ -12,68 +54,68 @@ const Contact = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-[3vw] font-bold">Get in touch</h1>
 
             <p className="text-zinc-600 w-full lg:w-4/5 leading-normal mt-4 sm:mt-5 text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              autem alias dignissimos asperiores fugiat debitis rerum quasi nam
-              quia odio eligendi
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum autem alias dignissimos asperiores fugiat debitis rerum quasi nam quia odio eligendi.
             </p>
 
-            {/* form field */}
+            {/* Form */}
             <div className="w-full max-w-md mt-6 sm:mt-8">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Name
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
                     className="mt-1 block w-full p-2 border border-gray-500 focus:outline-none focus:ring focus:ring-blue-500 rounded"
                   />
                 </div>
+
                 <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                     className="mt-1 block w-full p-2 border border-gray-500 focus:outline-none focus:ring focus:ring-blue-500 rounded"
                   />
                 </div>
+
                 <div className="mb-4">
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Message
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     rows="10"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     required
                     className="mt-1 block w-full p-2 border border-gray-500 focus:outline-none focus:ring focus:ring-blue-500 resize-none rounded"
                   ></textarea>
                 </div>
-                {/* button */}
+
+                {/* Submit Button */}
                 <button className="bg-bgblue z-30 text-white px-6 py-2 rounded-md hover:bg-transparent hover:text-bgblue hover:border-bgblue border border-transparent transition duration-300 ease-in-out">
                   Submit
                 </button>
               </form>
+
+              {/* Success and Error Messages */}
+              {submitSuccess && (
+                <p className="mt-4 text-green-600">Thank you for your message. We'll get back to you soon!</p>
+              )}
+              {errorMessage && (
+                <p className="mt-4 text-red-600">{errorMessage}</p>
+              )}
             </div>
           </div>
 
-          {/* right image */}
+          {/* Right Image */}
           <div className="w-full sm:w-1/2 h-full mt-8 lg:mt-0">
             <div className="relative z-10 w-full h-64 sm:h-80 lg:h-full">
               <img
@@ -84,52 +126,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-       
       </div>
- {/* contact section*/}
- <div className="relative mt-20 sm:mt-72">
-          <ContactSection/>
-        </div>
-      {/* faqs section */}
 
-      <section className="max-w-4xl mx-auto py-14">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold">FAQs</h1>
-          <p className="text-gray-500 mt-4">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4 flex justify-between items-center hover:bg-bgblue hover:text-white transition-colors duration-300">
-            <p className="font-medium">Question text goes here</p>
-            <button className="font-bold text-xl">+</button>
-          </div>
-        </div>
-      </section>
+      {/* Contact Section */}
+      <div className="relative mt-20 sm:mt-72">
+        <ContactSection />
+      </div>
     </>
   );
 };

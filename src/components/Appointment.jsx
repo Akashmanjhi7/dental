@@ -48,12 +48,13 @@ const Appointment = () => {
           date: '',
           time: ''
         });
+        alert("Form Submitted Successfully")
       } else {
         console.error('Form submission failed');
         setSubmitStatus('Form submission failed. Please try again.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      alert("An error occurred. Please try again.")
       setSubmitStatus('An error occurred. Please try again.');
     }
   };

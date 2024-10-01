@@ -5,12 +5,12 @@ const JoinUs = () => {
   const [result, setResult] = useState(''); // State to store form submission result
 
   const handleSubmit = async (e) => {
-    console.log("hey")
+   
     e.preventDefault();
     setResult('Sending...');
 
     const formData = new FormData(e.target);
-    console.log(e.target) 
+  
     formData.append('access_key', '8ab15586-4f7c-4903-9608-98ec569db172'); 
 
     try {
@@ -28,12 +28,13 @@ const JoinUs = () => {
       if (data.success) {
         setResult('Form Submitted Successfully');
         e.target.reset(); // Reset form on success
+        alert("Form Submitted Successfully")
       } else {
         console.error('Form submission failed', data);
         setResult(data.message || 'Error submitting form');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      alert("An error occurred. Please try again.")
       setResult('Error submitting form');
     }
   };

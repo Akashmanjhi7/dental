@@ -16,7 +16,7 @@ const Contact = () => {
         method: 'POST',
         body: JSON.stringify({
           ...formData,
-          access_key: '8ab15586-4f7c-4903-9608-98ec569db172', // Replace with your Web3Forms access key
+          access_key: '8ab15586-4f7c-4903-9608-98ec569db172', 
         }),
         headers: {
           'Content-Type': 'application/json',
@@ -28,11 +28,12 @@ const Contact = () => {
       if (data.success) {
         setSubmitSuccess(true);
         setFormData({ name: "", email: "", message: "" }); // Reset form after successful submission
+        alert("Form Submitted Successfully")
       } else {
         setErrorMessage(data.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error("Error:", error);
+      alert("An error occurred. Please try again.")
       setErrorMessage("Failed to send the message. Please try again later.");
     }
   };

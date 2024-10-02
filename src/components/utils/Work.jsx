@@ -52,7 +52,7 @@ const Work = () => {
               initial={{ y: '40%', opacity: 0, rotate: '40deg' }}
               whileInView={{ rotate: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.2, }}
               className='inline-block origin-left'
             >
               Lorem ipsum dolor sit amet consectetur overflow
@@ -63,7 +63,7 @@ const Work = () => {
               initial={{ y: '40%', opacity: 0, rotate: '40deg' }}
               whileInView={{ rotate: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.2, }}
               className='inline-block origin-left'
             >
               Lorem ipsum dolor sit down

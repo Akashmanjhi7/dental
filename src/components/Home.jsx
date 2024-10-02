@@ -115,6 +115,8 @@ const Home = () => {
         {/* Contact Info BOX */}
       </section>
         <ContactSection />
+        
+
 
       {/* Section 2 */}
    

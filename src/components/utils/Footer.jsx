@@ -18,7 +18,7 @@ const Footer = () => {
           Lorem ipsum dolor sit amet. <br /> Take Action Now
         </h2>
         <WhiteButton
-        link="/book-appointment"
+        link="/"
         text="Book Appointment"
       />
       </div>
@@ -44,9 +44,9 @@ const Footer = () => {
             <ul>
               <li><Link to="/" className="hover:underline">Home</Link></li>
               <li><Link to="/about" className="hover:underline">About</Link></li>
-              <li><Link to="/service" className="hover:underline">Services</Link></li>
-              <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-              <li><Link to="/careers" className="hover:underline">Career</Link></li>
+              <li><Link to="/" className="hover:underline">Services</Link></li>
+              <li><Link to="/" className="hover:underline">Contact</Link></li>
+              <li><Link to="/" className="hover:underline">Career</Link></li>
             </ul>
           </div>
 
@@ -54,9 +54,9 @@ const Footer = () => {
           <div className="sm:w-1/2 ">
             <h3 className="font-bold text-lg mb-2">Services</h3>
             <ul>
-              <li><Link to="/service-seven" className="hover:underline">Link Seven</Link></li>
-              <li><Link to="/service-eight" className="hover:underline">Link Eight</Link></li>
-              <li><Link to="/service-nine" className="hover:underline">Link Nine</Link></li>
+              <li><Link to="/" className="hover:underline">Link Seven</Link></li>
+              <li><Link to="/" className="hover:underline">Link Eight</Link></li>
+              <li><Link to="/" className="hover:underline">Link Nine</Link></li>
             </ul>
           </div>
         </div>

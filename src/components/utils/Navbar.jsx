@@ -128,7 +128,7 @@ const Navbar = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
          Lorem ipsum dolor sit amet. <br /> Take Action Now
         </h2>
-            <Link to='/book-appointment' onClick={() => setIsMenuOpen(false)}  className=' bg-white text-bgblue border-2 border-bgblue hover:bg-bgblue hover:text-white px-4 py-2 rounded-lg duration-300'>
+            <Link to='/' onClick={() => setIsMenuOpen(false)}  className=' bg-white text-bgblue border-2 border-bgblue hover:bg-bgblue hover:text-white px-4 py-2 rounded-lg duration-300'>
               Book Appointment
             </Link>
       </div> 

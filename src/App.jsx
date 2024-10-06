@@ -10,6 +10,7 @@ import Error from './components/Error'
 import Lenis from 'lenis'
 import JoinUs from './components/utils/JoinUs'
 import Footer from './components/utils/Footer'
+import HomeRef from './components/utils/HomeRef'
 
 const App = () => {
   const location = useLocation();
@@ -41,6 +42,7 @@ const App = () => {
       <div className='sm:mt-[11.5vh] mt-[8.5vh]'></div>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/home' element={<HomeRef />} />
         <Route path='/about' element={<About/>} />
         <Route path='/service' element={<Service/>} />
         <Route path='/contact' element={<Contact />} />

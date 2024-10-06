@@ -10,6 +10,7 @@ import ContactSection from './utils/ContactSection'
 import Work from './utils/Work'
 import Team from './utils/Team'
 import Marquee from 'react-fast-marquee'
+import HomeRef from './utils/HomeRef'
 
 const Home = () => {
 
@@ -66,6 +67,8 @@ const Home = () => {
     <>
       {/* Section 1 */}
 
+      <HomeRef />
+
       <section
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero.jpg')` }}
         className='w-full sm:h-[105vh] h-[40vh] bg-no-repeat bg-cover bg-top relative'>
@@ -113,8 +116,9 @@ const Home = () => {
         <div className='absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-bgblue to-transparent'></div>
 
         {/* Contact Info BOX */}
-      </section>
         <ContactSection />
+        
+      </section>
         
 
 

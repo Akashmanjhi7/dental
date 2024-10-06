@@ -28,7 +28,7 @@ const itemVariants = {
 
 export default function ContactSection() {
   return (
-    <div className="sm:absolute block w-full bg-transparent bottom-[-35%] px-4 sm:px-0 mt-4 sm:mt-0  ">
+    <div className="sm:absolute block w-full bg-transparent bottom-[-15%] px-4 sm:px-0 mt-4 sm:mt-0  ">
       <motion.div
         className="h-full max-w-screen-lg mx-auto flex flex-col sm:flex-row gap-4 sm:gap-1 overflow-hidden bg-transparent sm:bg-textwhite rounded-lg shadow-lg "
         variants={timelineVariants}

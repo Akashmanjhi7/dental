@@ -4,21 +4,21 @@ import { motion } from 'framer-motion'
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Dr. John Doe',
-      role: 'Dentist',
-      image: '/images/doctor.jpg',
+      name: ' John Doe',
+      role: 'CEO',
+      image: 'https://plus.unsplash.com/premium_photo-1682090258246-74c9293d4d75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVsaXZlcnl8ZW58MHwxfDB8fHww',
       description: 'Experienced dentist specializing in general and cosmetic dentistry.'
     },
     {
-      name: 'Dr. Jane Smith',
-      role: 'Orthodontist',
-      image: '/images/doctor.jpg',
+      name: ' Jane Smith',
+      role: 'CTO',
+      image: 'https://plus.unsplash.com/premium_photo-1682090258246-74c9293d4d75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVsaXZlcnl8ZW58MHwxfDB8fHww',
       description: 'Expert in orthodontics with a focus on creating beautiful smiles.'
     },
     {
-      name: 'Dr. Mike Johnson',
-      role: 'Oral Surgeon',
-      image: '/images/doctor.jpg',
+      name: ' Mike Johnson',
+      role: 'Director',
+      image: 'https://plus.unsplash.com/premium_photo-1682090258246-74c9293d4d75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVsaXZlcnl8ZW58MHwxfDB8fHww',
       description: 'Skilled oral surgeon with years of experience in complex procedures.'
     }
   ]

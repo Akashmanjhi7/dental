@@ -70,7 +70,7 @@ const Home = () => {
       <HomeRef />
 
       <section
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero.jpg')` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1663089993922-5d4601e1127b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}
         className='w-full sm:h-[105vh] h-[40vh] bg-no-repeat bg-cover bg-top relative'>
 
         <div className='flex flex-col h-full items-start justify-center text-textwhite sm:max-w-screen-lg mx-auto sm:gap-8 sm:p-0 p-8'>
@@ -82,7 +82,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
                 className="inline-block origin-left"
-              >Achieve Perfect</motion.span>
+              >Lorem, ipsum dolor.</motion.span>
             </h1>
             <div className='inline-block overflow-hidden'>
               <motion.h1
@@ -95,7 +95,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 1.2 }}
                 >
-                  Oral <span className='text-bgblue'>
+                  Lorem <span className='text-bgblue'>
                     <span className="typing-animation">
                       {currentWord}
                       <span className="cursor">|</span>
@@ -117,7 +117,7 @@ const Home = () => {
 
         {/* Contact Info BOX */}
         <ContactSection />
-        
+
       </section>
         
 
@@ -127,7 +127,7 @@ const Home = () => {
       <section  className='max-w-screen-lg mx-auto flex flex-col-reverse sm:flex-row items-center px-4 py-12 sm:py-[14vw] '>
         <div className='w-full flex flex-col justify-center  tracking-tight mb-8 sm:mb-0 mt-12 sm:mt-0 px-4 sm:px-0'>
           {/* Dynamic Heading */}
-          {["Professional Dental", "Care Services at", "Competitive Prices!"].map((item, index) => (
+          {["Lorem, ipsum dolor.", "Lorem, ipsum dolor.", "Lorem, ipsum dolor."].map((item, index) => (
             <h1 className='text-[2.9vh] sm:text-[3vw] font-bold overflow-hidden' key={index}>
               <motion.span
                 initial={{ y: "100%", opacity: 0 }}
@@ -162,7 +162,7 @@ const Home = () => {
         <div className='w-full relative mt-8'>
           <div className='absolute bg-bgblue rounded-xl bottom-[-5%] right-[-5%] w-2/3 h-2/3'></div>
           <div className='relative z-10 w-full aspect-square group rounded-lg overflow-hidden flex justify-center items-center'>
-            <img src="/images/dentist.jpg" alt="" className='h-full w-full object-cover object-top rounded-xl group-hover:scale-110 transition-all duration-[1s]' />
+            <img src="https://plus.unsplash.com/premium_photo-1663089993922-5d4601e1127b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-cover object-top rounded-xl group-hover:scale-110 transition-all duration-[1s]' />
             <div className="absolute top-0 right-0 w-10 h-10 bg-black opacity-0 rounded-full scale-0 group-hover:opacity-30 group-hover:scale-[40] transition-all duration-[1s]"></div>
 
             <Link to='/about' className='absolute rounded-full w-28 h-28 flex items-center justify-center text-textwhite text-sm p-3 border-2 border-white opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-[1s] cursor-pointer hover:bg-white hover:text-black hover:scale-[1.2]'>

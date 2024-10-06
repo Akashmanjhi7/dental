@@ -2,36 +2,36 @@ import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { TbDental , TbDentalBroken, TbDentalOff } from 'react-icons/tb';
 import { FaTooth } from "react-icons/fa6"; // Import necessary icons
-
+import { RiEBike2Fill } from "react-icons/ri";
 const Work = () => {
   const [work, setWork] = useState([
     {
       id: 1,
       icon: 'TbDental', // Icon name as string
-      title: 'Expert Dental Care',
+      title: 'Lorem ipsum dolor sit amet',
       description:
-        'Providing top-tier dental services with experienced professionals to ensure your dental health is in perfect condition.',
+        'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 2,
       icon: 'FaTooth', // Icon name as string
-      title: 'Tooth Whitening',
+      title: 'Ut enim ad minim veniam',
       description:
-        'Brighten your smile with our advanced tooth whitening services, providing long-lasting and natural results.',
+        'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
       id: 3,
       icon: 'TbDentalBroken', // Icon name as string
-      title: 'Emergency Dental Services',
+      title: 'Duis aute irure dolor',
       description:
-        'We offer emergency dental services to address urgent issues such as broken teeth, severe pain, or oral injuries.',
+        'In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     },
     {
       id: 4,
       icon: 'TbDentalOff', // Icon name as string
-      title: 'Dental Checkups',
+      title: 'Excepteur sint occaecat',
       description:
-        'Regular dental checkups are key to maintaining your oral health. Book an appointment today for a thorough exam.',
+        'Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
   ]);
 
@@ -93,10 +93,9 @@ const Work = () => {
                 <div className='image w-[20%] h-full flex items-start justify-center pt-2'>
                   <div className='sm:h-[6vw] sm:w-[6vw] bg-black group-hover:bg-textwhite rounded-full flex items-center justify-center duration-300 '>
                     {IconComponent && (
-                      <IconComponent
-                        size={40}
-                        className='text-white group-hover:text-black duration-300'
-                      />
+                      <RiEBike2Fill   size={40}
+                      className='text-white group-hover:text-black duration-300' />
+                      
                     )}
                   </div>
                 </div>

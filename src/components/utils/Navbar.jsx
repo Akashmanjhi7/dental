@@ -66,9 +66,9 @@ const Navbar = () => {
   })
 
   return (
-    <div className='w-full sm:shadow-lg shadow-2xl fixed top-0 bg-white   text-black py-4 px-8  z-[100] flex justify-between items-center '>
+    <div className='w-full sm:shadow-lg shadow-2xl fixed top-0 bg-white   text-black  px-8 py-2 z-[100] flex justify-between items-center '>
       <Link to='/'>
-        <h1 className='text-2xl font-bold'>DENTAL</h1>
+        <img src="/images/logo1.jpg" alt="" className='w-32 h-14 object-cover  ' />
       </Link>
 
       <div className="relative flex items-center gap-8  ">
@@ -149,7 +149,7 @@ const Navbar = () => {
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
-            {["about", "service", "contact","careers"].map((item, index) => (
+            {/* {["about", "service", "contact","careers"].map((item, index) => (
               <Link
                 key={index}
                 to={`/${item}`}
@@ -162,7 +162,7 @@ const Navbar = () => {
                 </span>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               </Link>
-            ))}
+            ))} */}
           </div>
           <button
             className="absolute top-2 right-6 text-white text-xl hover:bg-white hover:text-black rounded-full px-4 py-7 duration-300 font-bold"

@@ -15,7 +15,7 @@ const Footer = () => {
     <div className='absolute left-1/2 transform -translate-x-1/2 top-[-30%] w-full max-w-screen-lg'>
       <div className="bg-blue-600 py-16 px-4 text-center rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
-          Don't Let Dental Problems Wait! <br /> Take Action Now
+          Lorem ipsum dolor sit amet. <br /> Take Action Now
         </h2>
         <WhiteButton
         link="/book-appointment"

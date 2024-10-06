@@ -106,7 +106,7 @@ const Navbar = () => {
           {/* Image Section */}
           <div className='imgae h-full w-full sm:block hidden   '>
           <div className='h-2/3 relative rounded-lg overflow-hidden group    ' >
-              <img src="/images/off.jpg" alt=""  className='h-full w-full object-cover rounded-lg  flex items-center justify-center '/>
+              <img src="https://plus.unsplash.com/premium_photo-1663089993922-5d4601e1127b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""  className='h-full w-full object-cover rounded-lg  flex items-center justify-center '/>
 
               <div className='absolute bottom-0 left-0 w-full h-1/2 opacity-90 bg-gradient-to-t from-bgblue to-transparent'></div>
 
@@ -126,7 +126,7 @@ const Navbar = () => {
               <div className='w-full'>
       <div className=" text-white py-16 px-4 text-center rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
-          Don't Let Dental Problems Wait! <br /> Take Action Now
+         Lorem ipsum dolor sit amet. <br /> Take Action Now
         </h2>
             <Link to='/book-appointment' onClick={() => setIsMenuOpen(false)}  className=' bg-white text-bgblue border-2 border-bgblue hover:bg-bgblue hover:text-white px-4 py-2 rounded-lg duration-300'>
               Book Appointment

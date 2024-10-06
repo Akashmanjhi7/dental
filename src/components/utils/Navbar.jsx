@@ -74,7 +74,7 @@ const Navbar = () => {
       <div className="relative flex items-center gap-8  ">
         <div className='hidden sm:block'>
       <Button
-        link="/careers"
+        link="/"
         text="Join Us"
         />
       </div>

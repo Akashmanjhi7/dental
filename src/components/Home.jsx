@@ -109,7 +109,7 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt eveniet corporis! Inventore ex alias unde natus cupiditate nam hic!
           </div>
 
-          <Button link='/book-appointment' text='Book Appointment' />
+          <Button link='/' text='Book Appointment' />
         </div>
 
         {/* Gradient */}

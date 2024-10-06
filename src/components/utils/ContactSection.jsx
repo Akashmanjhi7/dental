@@ -88,7 +88,7 @@ export default function ContactSection() {
           </div>
           <div>
             <h1 className="font-bold text-[1.9vh] sm:text-[1.6vw] text-white leading-none mb-2">Book Appointment</h1>
-            <a href="/book-appointment" className="border-b text-base sm:text-[0.9vw] border-white text-white ">
+            <a href="/" className="border-b text-base sm:text-[0.9vw] border-white text-white ">
               Book an Appointment now
             </a>
           </div>
